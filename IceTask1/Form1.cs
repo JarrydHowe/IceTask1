@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace IceTask1
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string input = Interaction.InputBox("Enter Label Name", "Lable Changer", "", 100, 100); 
+            lblText.Text = input.ToString();
         }
     }
 }
